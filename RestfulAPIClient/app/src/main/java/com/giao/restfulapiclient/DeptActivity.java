@@ -33,8 +33,7 @@ public class DeptActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dept);
-        // Show the Up button in the action bar.
-        setupActionBar();
+
         data = new ArrayList<String>();
         listv = (ListView) findViewById(R.id.lv_dept);
         context = this;
