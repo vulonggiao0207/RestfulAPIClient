@@ -67,8 +67,7 @@ public class LoginActivity extends Activity {
             try {
 
                 // Call the User Authentication Method in API
-                JSONObject jsonObj = api.UserAuthentication(params[0],
-                        params[1]);
+                JSONObject jsonObj = api.UserAuthentication(params[0],params[1]);
 
                 //Parse the JSON Object to boolean
                 JSONParser parser = new JSONParser();

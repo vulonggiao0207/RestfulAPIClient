@@ -24,7 +24,15 @@ public class JSONParser {
         try {
             JSONArray jsonArray=object.getJSONArray("Value");
             JSONObject jsonObj=null;
-            for(int i=0;i<jsonArray.length();i++) { jsonObj=jsonArray.getJSONObject(i); arrayList.add(new DeptTable(jsonObj.getInt("no"), jsonObj.getString("name"))); } } catch (JSONException e) { // TODO Auto-generated catch block Log.d("JSONParser => parseDepartment", e.getMessage());
+            for(int i=0;i<jsonArray.length();i++)
+            {
+                jsonObj=jsonArray.getJSONObject(i);
+                arrayList.add(new DeptTable(jsonObj.getInt("no"), jsonObj.getString("name")));
+            }
+        }
+        catch (JSONException e)
+        { // TODO Auto-generated catch block
+         Log.d("JSONParse-parsDeparment", e.getMessage());
         }
         return arrayList;
     }
@@ -35,7 +43,7 @@ public class JSONParser {
             userAtuh= object.getBoolean("Value");
         } catch (JSONException e) {
             // TODO Auto-generated catch block
-            Log.d("JSONParser => parseUserAuth", e.getMessage());
+            Log.d("JSONParse-parseUserAuth", e.getMessage());
         }
 
         return userAtuh;
@@ -53,7 +61,7 @@ public class JSONParser {
 
         } catch (JSONException e) {
             // TODO Auto-generated catch block
-            Log.d("JSONParser => parseUserDetails", e.getMessage());
+            Log.d("JSNPase-pareUseDetail", e.getMessage());
         }
 
         return userDetail;
